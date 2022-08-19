@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Pie and Donut Charts</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <div style="width: 300px">
+  <canvas id='myChart'></canvas>
+  </div>
+  <script>
+    var ctx = document.getElementById('myChart');
+    var myChart = new Chart(ctx, {
+      type: 'doughnut',
+      data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+        datasets: [{
+          label:'Cars Sold Each Month',
+          data:[300, 50, 200, 130, 175, 205],
+          backgroundColor:[
+            'rgb(255, 196, 207)',
+            'rgb(217, 126, 143)',
+            'rgb(184, 86, 104)',
+            'rgb(145, 52, 69)',
+            'rgb(115, 30, 45)',
+            'rgb(61, 4, 14)'
+          ],
+          hoverOffset: 1
+        }]
+      }
+    });
+  </script>
+  <div style="width: 300px">
+    <canvas id='myChart2'></canvas>
+  </div>
+  <script>
+    var cty = document.getElementById('myChart2');
+    var myChart = new Chart(cty, {
+      type: 'pie',
+      data: {
+        labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+        datasets: [{
+          label:'Show Viewers',
+          data:[1700000, 1300000, 1000000, 950000, 700000, 2000000],
+          backgroundColor:[
+            'rgb(201, 255, 194)',
+            'rgb(109, 184, 99)',
+            'rgb(88, 163, 78)',
+            'rgb(57, 128, 47)',
+            'rgb(36, 99, 27)',
+            'rgb(16, 69, 9)'
+          ],
+          hoverOffset: 1
+        }]
+      }
+    });
+  </script>
+  <div style="width: 300px">
+    <canvas id="myChart3"></canvas>
+  </div>
+  <script>
+    var ctz = document.getElementById('myChart3');
+    var myChart = new Chart(ctz, {
+      type: 'polarArea',
+      data: {
+        labels: [
+          '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018'
+        ],
+        datasets: [{
+          label: 'Number of YouTubers',
+          data: [100000000, 200000000, 300000000, 400000000, 500000000, 600000000, 700000000, 800000000, 900000000],
+          backgroundColor: [
+            'rgb(206, 222, 237)',
+            'rgb(159, 182, 204)',
+            'rgb(106, 135, 163)',
+            'rgb(82, 126, 168)',
+            'rgb(54, 100, 143)',
+            'rgb(34, 80, 122)',
+            'rgb(21, 64, 102)',
+            'rgb(10, 44, 74)',
+            'rgb(2, 23, 41)'
+          ]
+        }]
+      },
+    });
+  </script>
+</body>
+</html>
